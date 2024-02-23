@@ -11,4 +11,7 @@ def retorna_ao_menu():
 
 def exibir_subTitulos(texto):
     limpa_tela()
+    linha = '*' * (len(texto) + 4)
+    print(linha)
     print(f'\n{texto}\n')
+    print(f'{linha}\n')

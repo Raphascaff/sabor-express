@@ -1,5 +1,5 @@
 from utils import limpa_tela, retorna_ao_menu, exibir_subTitulos
-from crud_restaurante import cadastrar_restaurante, listar_restaurantes
+from crud_restaurante import cadastrar_restaurante, listar_restaurantes, alternar_estado_restaurante
 
 def exibir_nome_programa():
     print('Sabor Express')
@@ -13,7 +13,7 @@ def exibir_opcoes():
     ### ----- 3. Ativar: Restaurante ------ ###
     ### ----- 4. Sair: Restaurante ------ ###
 
-    op = ['1. Cadastrar: Restaurante', '2. Listar: Restaurante', '3. Ativar: Restaurante', '4. Sair']
+    op = ['1. Cadastrar: Restaurante', '2. Listar: Restaurante', '3. Altera Status: Restaurante', '4. Sair']
 
     print(op[0])
     print(op[1])
@@ -21,7 +21,11 @@ def exibir_opcoes():
     print(op[3])
     return op
 
-    
+
+        
+
+
+    retorna_ao_menu()
     
 
 def escolhe_opcao():
@@ -36,7 +40,7 @@ def escolhe_opcao():
             case 2:
                 listar_restaurantes()
             case 3:
-                exibir_subTitulos('Ativar restaurante')
+                alternar_estado_restaurante()
             case 4:
                 exibir_subTitulos('Finalizando o app')
             case _:
